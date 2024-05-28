@@ -1,0 +1,6 @@
+El archivo principal es Game.java ejecutarlo para ver la funcionalidad del juego
+Si hay un error que indique que no se encontró el archivo lo unico que se tiene que hacer es colocar la ruta del archivo
+en en constructor y los metodos de la clase Archivo Ej "C/user/proyecto/Leaderboard + name + ".txt";
+
+Lo más probable es que no haya ese error porque para evitarlo pusimos este archivo en la raiz del proyecto para que siempre lo busque ahi 
+sin importar donde esté ubicado el proyecto
