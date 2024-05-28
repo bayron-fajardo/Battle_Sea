@@ -1,3 +1,4 @@
 raul, 00:00:25, Player, 2024-05-27
 Brayan, 00:00:33, Player, 2024-05-27
 mario, 00:00:40, Player, 2024-05-27
+rodrigo, 00:00:26, Player, 2024-05-27

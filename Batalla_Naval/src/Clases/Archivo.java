@@ -9,7 +9,7 @@ public class Archivo {
     private String fileName;
 
     public Archivo(String name) {
-        this.fileName = "src/Docs/" + name + ".txt";
+        this.fileName =  name + ".txt";
         File archivo = new File(fileName);
 
         try {
@@ -23,7 +23,7 @@ public class Archivo {
     }
 
     public void saveDataLibros(String name, String time, LocalDate fecha, String winner) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/Docs/Leaderboard.txt", true))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Leaderboard.txt", true))) {
             writer.write(  name + ", " + time + ", " + winner + ", " + fecha + "\n");
         } catch (IOException e) {
             System.out.println("Error al guardar los datos de la partida: " + e.getMessage());
@@ -40,7 +40,7 @@ public class Archivo {
 
     public List<String> readLeaderboardData() {
         List<String> data = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/Docs/Leaderboard.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Leaderboard.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 data.add(line);

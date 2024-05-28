@@ -24,9 +24,14 @@ public class GameRecord extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        DefaultTableModel model = new DefaultTableModel();
-        table = new JTable(model);
+        DefaultTableModel model = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; // Hacer todas las celdas no editables
+            }
+        };
 
+        table = new JTable(model);
         model.addColumn("Name");
         model.addColumn("Time");
         model.addColumn("Winner");
